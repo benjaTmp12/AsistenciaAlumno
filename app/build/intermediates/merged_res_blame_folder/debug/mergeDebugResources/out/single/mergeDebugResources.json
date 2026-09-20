@@ -16,12 +16,16 @@
         "source": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-main-43:\\layout\\activity_registro_asistencia.xml"
     },
     {
+        "merged": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-debug-41:\\drawable_ic_stop.xml.flat",
+        "source": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-main-43:\\drawable\\ic_stop.xml"
+    },
+    {
         "merged": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-debug-41:\\mipmap-anydpi_ic_launcher.xml.flat",
         "source": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-main-43:\\mipmap-anydpi\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-debug-41:\\drawable_ic_stop.xml.flat",
-        "source": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-main-43:\\drawable\\ic_stop.xml"
+        "merged": "com.example.asistenciaalumno.app-debug-41:/layout_activity_principal_alumno.xml.flat",
+        "source": "com.example.asistenciaalumno.app-main-43:/layout/activity_principal_alumno.xml"
     },
     {
         "merged": "C:\\Users\\tampi\\.gradle\\daemon\\9.1.0\\com.example.asistenciaalumno.app-debug-41:\\drawable_ic_launcher_background.xml.flat",

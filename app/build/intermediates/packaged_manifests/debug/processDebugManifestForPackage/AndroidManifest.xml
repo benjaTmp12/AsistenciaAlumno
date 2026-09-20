@@ -29,8 +29,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AsistenciaAlumno" >
+
+        <!-- P-AL01: Principal -->
         <activity
-            android:name="com.example.asistenciaalumno.ui.registro.RegistroAsistenciaActivity"
+            android:name="com.example.asistenciaalumno.ui.principal.PrincipalActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +40,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- P-AL02: Registro -->
+        <activity
+            android:name="com.example.asistenciaalumno.ui.registro.RegistroAsistenciaActivity"
+            android:exported="false" />
+
+        <!-- P-AL03: Confirmación -->
         <activity
             android:name="com.example.asistenciaalumno.ui.confirmacion.ConfirmacionAsistenciaActivity"
             android:exported="false" />

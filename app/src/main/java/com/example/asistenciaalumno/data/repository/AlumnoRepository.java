@@ -17,8 +17,8 @@ import java.util.Map;
 
 /**
  * Repositorio para la App Alumno.
- * Gestiona la búsqueda de sesión por código (RF-11, RF-12)
- * y el registro de asistencia en Firebase Realtime Database (RF-13).
+ * Gestiona la búsqueda de sesión por código (RF-11, RF-12),
+ * validación de duplicados (RF-15 / ERR-05) y registro de asistencia en Firebase (RF-13).
  */
 public class AlumnoRepository {
 
@@ -39,19 +39,19 @@ public class AlumnoRepository {
     }
 
     /**
-     * Valida la existencia y estado activo de la sesión por código (RF-11, RF-12)
-     * y registra al alumno en sesiones/{idSesion}/alumnos/{idAlumno} (RF-13).
+     * Valida la sesión y registra al alumno en sesiones/{idSesion}/alumnos/{idAlumno} (RF-13).
+     * Controla ERR-01 (código no existe), ERR-02 (sesión cerrada) y ERR-05 (alumno duplicado).
      */
     public void registrarAsistencia(String codigo, String idAlumno, String nombre, RegistroCallback callback) {
         sesionesRef.orderByChild("codigo").equalTo(codigo).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // ERR-01: Código no existe
                 if (!snapshot.exists() || snapshot.getChildrenCount() == 0) {
-                    callback.onError("Código inválido: no se encontró ninguna sesión con ese código.");
+                    callback.onError("Sesión no encontrada con el código ingresado.");
                     return;
                 }
 
-                // Obtener la sesión coincidente
                 DataSnapshot sesionSnapshot = snapshot.getChildren().iterator().next();
                 Sesion sesion = sesionSnapshot.getValue(Sesion.class);
                 String idSesion = sesionSnapshot.getKey();
@@ -61,13 +61,20 @@ public class AlumnoRepository {
                     return;
                 }
 
-                // RF-12: Validar que la sesión esté activa
+                // ERR-02: Sesión cerrada (activa == false)
                 if (!sesion.isActiva()) {
-                    callback.onError("Esta sesión ya ha sido finalizada por el docente. No se aceptan nuevos registros.");
+                    callback.onError("La sesión está cerrada. No se aceptan nuevos registros.");
                     return;
                 }
 
-                // RF-13: Registrar en sesiones/{idSesion}/alumnos/{idAlumno}
+                // RF-15 / ERR-05: Validar si el alumno ya está registrado en esta sesión
+                String idLimpio = idAlumno.trim();
+                if (sesionSnapshot.child("alumnos").hasChild(idLimpio)) {
+                    callback.onError("Ya registraste asistencia en esta sesión.");
+                    return;
+                }
+
+                // RF-13: Registrar bajo alumnos/{idAlumno}
                 String horaRegistro = DateTimeFormatter.ISO_INSTANT.format(Instant.now());
 
                 Map<String, Object> datosAlumno = new HashMap<>();
@@ -76,20 +83,21 @@ public class AlumnoRepository {
 
                 sesionesRef.child(idSesion)
                         .child("alumnos")
-                        .child(idAlumno.trim())
+                        .child(idLimpio)
                         .setValue(datosAlumno)
                         .addOnSuccessListener(aVoid -> {
                             String curso = sesion.getCurso() != null ? sesion.getCurso() : "Curso";
                             callback.onSuccess(curso, horaRegistro);
                         })
                         .addOnFailureListener(e -> {
-                            callback.onError("Error al registrar asistencia en Firebase: " + e.getMessage());
+                            callback.onError("Error al registrar en Firebase: " + e.getMessage());
                         });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                callback.onError("Error de conexión con Firebase: " + error.getMessage());
+                // ERR-04: RTDB sin conexión
+                callback.onError("Sin conexión con el servidor. Intenta de nuevo.");
             }
         });
     }
