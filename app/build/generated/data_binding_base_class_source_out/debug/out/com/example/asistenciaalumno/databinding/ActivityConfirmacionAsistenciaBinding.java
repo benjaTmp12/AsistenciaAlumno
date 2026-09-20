@@ -4,7 +4,6 @@ package com.example.asistenciaalumno.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,9 +28,6 @@ public final class ActivityConfirmacionAsistenciaBinding implements ViewBinding 
   public final MaterialCardView cardDetallesRegistro;
 
   @NonNull
-  public final ImageView ivCheckExito;
-
-  @NonNull
   public final ConstraintLayout mainConfirmacion;
 
   @NonNull
@@ -51,14 +47,12 @@ public final class ActivityConfirmacionAsistenciaBinding implements ViewBinding 
 
   private ActivityConfirmacionAsistenciaBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnAceptar, @NonNull MaterialCardView cardDetallesRegistro,
-      @NonNull ImageView ivCheckExito, @NonNull ConstraintLayout mainConfirmacion,
-      @NonNull TextView tvAlumnoConfirmado, @NonNull TextView tvCursoConfirmado,
-      @NonNull TextView tvHoraConfirmada, @NonNull TextView tvMensajeConfirmacion,
-      @NonNull TextView tvTituloConfirmacion) {
+      @NonNull ConstraintLayout mainConfirmacion, @NonNull TextView tvAlumnoConfirmado,
+      @NonNull TextView tvCursoConfirmado, @NonNull TextView tvHoraConfirmada,
+      @NonNull TextView tvMensajeConfirmacion, @NonNull TextView tvTituloConfirmacion) {
     this.rootView = rootView;
     this.btnAceptar = btnAceptar;
     this.cardDetallesRegistro = cardDetallesRegistro;
-    this.ivCheckExito = ivCheckExito;
     this.mainConfirmacion = mainConfirmacion;
     this.tvAlumnoConfirmado = tvAlumnoConfirmado;
     this.tvCursoConfirmado = tvCursoConfirmado;
@@ -106,12 +100,6 @@ public final class ActivityConfirmacionAsistenciaBinding implements ViewBinding 
         break missingId;
       }
 
-      id = R.id.ivCheckExito;
-      ImageView ivCheckExito = ViewBindings.findChildViewById(rootView, id);
-      if (ivCheckExito == null) {
-        break missingId;
-      }
-
       ConstraintLayout mainConfirmacion = (ConstraintLayout) rootView;
 
       id = R.id.tvAlumnoConfirmado;
@@ -145,8 +133,8 @@ public final class ActivityConfirmacionAsistenciaBinding implements ViewBinding 
       }
 
       return new ActivityConfirmacionAsistenciaBinding((ConstraintLayout) rootView, btnAceptar,
-          cardDetallesRegistro, ivCheckExito, mainConfirmacion, tvAlumnoConfirmado,
-          tvCursoConfirmado, tvHoraConfirmada, tvMensajeConfirmacion, tvTituloConfirmacion);
+          cardDetallesRegistro, mainConfirmacion, tvAlumnoConfirmado, tvCursoConfirmado,
+          tvHoraConfirmada, tvMensajeConfirmacion, tvTituloConfirmacion);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

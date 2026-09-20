@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.asistenciaalumno.AlumnoValidationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-20T21:27:08.709Z" hostname="BENJATMP" time="0.005">
+<testsuite name="com.example.asistenciaalumno.AlumnoValidationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-20T22:52:49.878Z" hostname="BENJATMP" time="0.006">
   <properties/>
-  <testcase name="codigoCuatroDigitos_esValido" classname="com.example.asistenciaalumno.AlumnoValidationTest" time="0.004"/>
+  <testcase name="codigoCuatroDigitos_esValido" classname="com.example.asistenciaalumno.AlumnoValidationTest" time="0.005"/>
   <testcase name="idAlumno_rangoCaracteres" classname="com.example.asistenciaalumno.AlumnoValidationTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -10,30 +10,18 @@
     tools:context=".ui.confirmacion.ConfirmacionAsistenciaActivity">
 
     <!-- Icono Check Verde Gigante (RF-14) -->
-    <ImageView
-        android:id="@+id/ivCheckExito"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="48dp"
-        android:contentDescription="Éxito"
-        android:src="@drawable/ic_check_circle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/color_success" />
-
-    <TextView
+        <TextView
         android:id="@+id/tvTituloConfirmacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:text="@string/title_confirmacion"
-        android:textColor="@color/text_primary"
-        android:textSize="24sp"
+        android:textColor="@color/color_success"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivCheckExito" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMensajeConfirmacion"

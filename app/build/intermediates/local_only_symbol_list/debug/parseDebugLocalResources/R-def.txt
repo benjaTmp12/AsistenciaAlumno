@@ -14,16 +14,8 @@ color surface_card
 color text_primary
 color text_secondary
 color white
-drawable ic_arrow_back
-drawable ic_badge
-drawable ic_check_circle
-drawable ic_group
-drawable ic_key
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable ic_person
-drawable ic_school
-drawable ic_stop
 id btnAceptar
 id btnIrRegistro
 id btnRegistrar
@@ -33,9 +25,6 @@ id cardInstruccionesAlumno
 id etCodigo
 id etIdAlumno
 id etNombre
-id ivCheckExito
-id ivIconoAlumno
-id ivIconoRegistro
 id mainConfirmacion
 id mainPrincipalAlumno
 id mainRegistro

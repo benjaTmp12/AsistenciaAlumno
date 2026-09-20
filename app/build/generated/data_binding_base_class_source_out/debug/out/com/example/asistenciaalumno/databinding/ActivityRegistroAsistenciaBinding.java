@@ -4,7 +4,6 @@ package com.example.asistenciaalumno.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -41,9 +40,6 @@ public final class ActivityRegistroAsistenciaBinding implements ViewBinding {
   public final TextInputEditText etNombre;
 
   @NonNull
-  public final ImageView ivIconoRegistro;
-
-  @NonNull
   public final ConstraintLayout mainRegistro;
 
   @NonNull
@@ -70,18 +66,17 @@ public final class ActivityRegistroAsistenciaBinding implements ViewBinding {
   private ActivityRegistroAsistenciaBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnRegistrar, @NonNull MaterialCardView cardFormularioAlumno,
       @NonNull TextInputEditText etCodigo, @NonNull TextInputEditText etIdAlumno,
-      @NonNull TextInputEditText etNombre, @NonNull ImageView ivIconoRegistro,
-      @NonNull ConstraintLayout mainRegistro, @NonNull ProgressBar progressBarRegistro,
-      @NonNull TextInputLayout tilCodigo, @NonNull TextInputLayout tilIdAlumno,
-      @NonNull TextInputLayout tilNombre, @NonNull TextView tvErrorGeneral,
-      @NonNull TextView tvSubtituloRegistro, @NonNull TextView tvTituloRegistro) {
+      @NonNull TextInputEditText etNombre, @NonNull ConstraintLayout mainRegistro,
+      @NonNull ProgressBar progressBarRegistro, @NonNull TextInputLayout tilCodigo,
+      @NonNull TextInputLayout tilIdAlumno, @NonNull TextInputLayout tilNombre,
+      @NonNull TextView tvErrorGeneral, @NonNull TextView tvSubtituloRegistro,
+      @NonNull TextView tvTituloRegistro) {
     this.rootView = rootView;
     this.btnRegistrar = btnRegistrar;
     this.cardFormularioAlumno = cardFormularioAlumno;
     this.etCodigo = etCodigo;
     this.etIdAlumno = etIdAlumno;
     this.etNombre = etNombre;
-    this.ivIconoRegistro = ivIconoRegistro;
     this.mainRegistro = mainRegistro;
     this.progressBarRegistro = progressBarRegistro;
     this.tilCodigo = tilCodigo;
@@ -149,12 +144,6 @@ public final class ActivityRegistroAsistenciaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ivIconoRegistro;
-      ImageView ivIconoRegistro = ViewBindings.findChildViewById(rootView, id);
-      if (ivIconoRegistro == null) {
-        break missingId;
-      }
-
       ConstraintLayout mainRegistro = (ConstraintLayout) rootView;
 
       id = R.id.progressBarRegistro;
@@ -200,9 +189,8 @@ public final class ActivityRegistroAsistenciaBinding implements ViewBinding {
       }
 
       return new ActivityRegistroAsistenciaBinding((ConstraintLayout) rootView, btnRegistrar,
-          cardFormularioAlumno, etCodigo, etIdAlumno, etNombre, ivIconoRegistro, mainRegistro,
-          progressBarRegistro, tilCodigo, tilIdAlumno, tilNombre, tvErrorGeneral,
-          tvSubtituloRegistro, tvTituloRegistro);
+          cardFormularioAlumno, etCodigo, etIdAlumno, etNombre, mainRegistro, progressBarRegistro,
+          tilCodigo, tilIdAlumno, tilNombre, tvErrorGeneral, tvSubtituloRegistro, tvTituloRegistro);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

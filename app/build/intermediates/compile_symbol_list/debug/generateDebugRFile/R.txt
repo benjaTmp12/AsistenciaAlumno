@@ -12,16 +12,8 @@ int color surface_card 0x0
 int color text_primary 0x0
 int color text_secondary 0x0
 int color white 0x0
-int drawable ic_arrow_back 0x0
-int drawable ic_badge 0x0
-int drawable ic_check_circle 0x0
-int drawable ic_group 0x0
-int drawable ic_key 0x0
 int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
-int drawable ic_person 0x0
-int drawable ic_school 0x0
-int drawable ic_stop 0x0
 int id btnAceptar 0x0
 int id btnIrRegistro 0x0
 int id btnRegistrar 0x0
@@ -31,9 +23,6 @@ int id cardInstruccionesAlumno 0x0
 int id etCodigo 0x0
 int id etIdAlumno 0x0
 int id etNombre 0x0
-int id ivCheckExito 0x0
-int id ivIconoAlumno 0x0
-int id ivIconoRegistro 0x0
 int id mainConfirmacion 0x0
 int id mainPrincipalAlumno 0x0
 int id mainRegistro 0x0

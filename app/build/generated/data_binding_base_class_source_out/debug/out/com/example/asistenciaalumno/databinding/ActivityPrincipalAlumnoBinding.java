@@ -4,7 +4,6 @@ package com.example.asistenciaalumno.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,9 +28,6 @@ public final class ActivityPrincipalAlumnoBinding implements ViewBinding {
   public final MaterialCardView cardInstruccionesAlumno;
 
   @NonNull
-  public final ImageView ivIconoAlumno;
-
-  @NonNull
   public final ConstraintLayout mainPrincipalAlumno;
 
   @NonNull
@@ -42,12 +38,11 @@ public final class ActivityPrincipalAlumnoBinding implements ViewBinding {
 
   private ActivityPrincipalAlumnoBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnIrRegistro, @NonNull MaterialCardView cardInstruccionesAlumno,
-      @NonNull ImageView ivIconoAlumno, @NonNull ConstraintLayout mainPrincipalAlumno,
-      @NonNull TextView tvSubtituloAlumno, @NonNull TextView tvTituloAlumno) {
+      @NonNull ConstraintLayout mainPrincipalAlumno, @NonNull TextView tvSubtituloAlumno,
+      @NonNull TextView tvTituloAlumno) {
     this.rootView = rootView;
     this.btnIrRegistro = btnIrRegistro;
     this.cardInstruccionesAlumno = cardInstruccionesAlumno;
-    this.ivIconoAlumno = ivIconoAlumno;
     this.mainPrincipalAlumno = mainPrincipalAlumno;
     this.tvSubtituloAlumno = tvSubtituloAlumno;
     this.tvTituloAlumno = tvTituloAlumno;
@@ -92,12 +87,6 @@ public final class ActivityPrincipalAlumnoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ivIconoAlumno;
-      ImageView ivIconoAlumno = ViewBindings.findChildViewById(rootView, id);
-      if (ivIconoAlumno == null) {
-        break missingId;
-      }
-
       ConstraintLayout mainPrincipalAlumno = (ConstraintLayout) rootView;
 
       id = R.id.tvSubtituloAlumno;
@@ -113,8 +102,7 @@ public final class ActivityPrincipalAlumnoBinding implements ViewBinding {
       }
 
       return new ActivityPrincipalAlumnoBinding((ConstraintLayout) rootView, btnIrRegistro,
-          cardInstruccionesAlumno, ivIconoAlumno, mainPrincipalAlumno, tvSubtituloAlumno,
-          tvTituloAlumno);
+          cardInstruccionesAlumno, mainPrincipalAlumno, tvSubtituloAlumno, tvTituloAlumno);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

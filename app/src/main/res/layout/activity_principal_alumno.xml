@@ -9,31 +9,18 @@
     android:padding="24dp"
     tools:context=".ui.principal.PrincipalActivity">
 
-    <!-- Header con Icono -->
-    <ImageView
-        android:id="@+id/ivIconoAlumno"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_school"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/primary_teal" />
-
     <TextView
         android:id="@+id/tvTituloAlumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="48dp"
         android:text="Portal del Alumno"
         android:textColor="@color/text_primary"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivIconoAlumno" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSubtituloAlumno"
@@ -95,7 +82,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1️⃣ Ten a mano tu RUT o ID de estudiante"
+                android:text="1. Ten a mano tu RUT o ID de estudiante"
                 android:textColor="@color/text_primary"
                 android:textSize="13sp" />
 
@@ -103,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="2️⃣ Ingresa el código numérico de 4 dígitos"
+                android:text="2. Ingresa el código numérico de 4 dígitos"
                 android:textColor="@color/text_primary"
                 android:textSize="13sp" />
 
@@ -111,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="3️⃣ Recibe la confirmación instantánea"
+                android:text="3. Recibe la confirmación instantánea"
                 android:textColor="@color/text_primary"
                 android:textSize="13sp" />
 
@@ -130,8 +117,6 @@
         android:textStyle="bold"
         app:backgroundTint="@color/primary_teal"
         app:cornerRadius="12dp"
-        app:icon="@drawable/ic_key"
-        app:iconGravity="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

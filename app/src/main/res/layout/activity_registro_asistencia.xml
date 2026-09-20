@@ -9,31 +9,18 @@
     android:padding="20dp"
     tools:context=".ui.registro.RegistroAsistenciaActivity">
 
-    <!-- Header con Icono -->
-    <ImageView
-        android:id="@+id/ivIconoRegistro"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_school"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/primary_teal" />
-
     <TextView
         android:id="@+id/tvTituloRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:text="@string/title_registro"
         android:textColor="@color/text_primary"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivIconoRegistro" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSubtituloRegistro"
@@ -84,9 +71,7 @@
                 app:counterMaxLength="4"
                 app:errorEnabled="true"
                 app:helperText="@string/helper_codigo"
-                app:helperTextEnabled="true"
-                app:startIconDrawable="@drawable/ic_key"
-                app:startIconTint="@color/primary_teal">
+                app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCodigo"
@@ -118,9 +103,7 @@
                 app:counterMaxLength="20"
                 app:errorEnabled="true"
                 app:helperText="@string/helper_id_alumno"
-                app:helperTextEnabled="true"
-                app:startIconDrawable="@drawable/ic_badge"
-                app:startIconTint="@color/primary_teal">
+                app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etIdAlumno"
@@ -147,9 +130,7 @@
                 app:boxCornerRadiusTopStart="10dp"
                 app:errorEnabled="true"
                 app:helperText="@string/helper_nombre_alumno"
-                app:helperTextEnabled="true"
-                app:startIconDrawable="@drawable/ic_person"
-                app:startIconTint="@color/primary_teal">
+                app:helperTextEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNombre"
