@@ -1,0 +1,6 @@
+<resources>
+    <style name="Base.Theme.AsistenciaAlumno" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_teal</item>
+    </style>
+    <style name="Theme.AsistenciaAlumno" parent="Base.Theme.AsistenciaAlumno" />
+</resources>

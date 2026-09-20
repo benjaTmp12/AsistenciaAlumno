@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.asistenciaalumno.app-mergeDebugResources-40:/layout/activity_confirmacion_asistencia.xml",
+        "source": "com.example.asistenciaalumno.app-main-43:/layout/activity_confirmacion_asistencia.xml"
+    },
+    {
+        "merged": "com.example.asistenciaalumno.app-mergeDebugResources-40:/layout/activity_registro_asistencia.xml",
+        "source": "com.example.asistenciaalumno.app-main-43:/layout/activity_registro_asistencia.xml"
+    }
+]

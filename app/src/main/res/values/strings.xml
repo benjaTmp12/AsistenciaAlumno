@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Asistencia Alumno</string>
+    <string name="title_registro">Registro de Asistencia</string>
+    <string name="subtitle_registro">Ingresa el código proporcionado por tu docente</string>
+    
+    <string name="hint_codigo">Código de 4 dígitos</string>
+    <string name="helper_codigo">Código numérico visible en pantalla (ej. 4821)</string>
+    
+    <string name="hint_id_alumno">RUT / ID Alumno</string>
+    <string name="helper_id_alumno">Entre 5 y 20 caracteres (sin puntos ni guión)</string>
+    
+    <string name="hint_nombre_alumno">Nombre Completo</string>
+    <string name="helper_nombre_alumno">Tu nombre y apellido</string>
+    
+    <string name="btn_registrar">Registrar Asistencia</string>
+    <string name="registrando">Validando sesión y registrando…</string>
+    
+    <!-- Confirmación (RF-14) -->
+    <string name="title_confirmacion">¡Asistencia Registrada!</string>
+    <string name="msg_confirmacion">Tu presencia ha sido confirmada en tiempo real en la lista del docente.</string>
+    <string name="btn_volver_inicio">Aceptar</string>
+</resources>
